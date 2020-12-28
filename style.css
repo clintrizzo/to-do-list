@@ -13,8 +13,27 @@ header {
     background-color: beige;
 }
 
+.todos {
+    position: relative;
+    min-height: 85vh;
+}
+
 form {
     padding-top: 15px;
     padding-left: 5px;
     text-align: center;
+}
+
+figure {
+    padding-bottom: 500px;
+}
+
+footer {
+    font-family: 'Brush Script MT', cursive;
+    position: absolute;
+    background-color: beige;
+    text-align: center;
+    font-size: x-large;
+    bottom: 0;
+    width: 100%;
 }
