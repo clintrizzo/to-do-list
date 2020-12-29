@@ -41,17 +41,20 @@ input {
     border-color: beige;
 }
 
-ul {
+ul.transbox {
     text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
+    color: black;
+    font-size: 20px;
     font-weight: bolder;
-    font-style: italic;
+    background-color: #fdfdfd;
+    opacity: .7;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button {
     margin-left: 5px;
     background-color: beige;
+    color: black;
     font-style: italic;
     padding-left: 5px;
     padding-right: 5px;
