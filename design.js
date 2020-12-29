@@ -35,3 +35,23 @@ function intit() {
 
     renderTodos();
 }
+
+function storedTodos() {
+    localStorage.setItemJSON.stringify(todos);
+}
+
+todoForm.addEventListener("sumbit", function(event) {
+    event.preventDefault();
+
+    var todoText = todoInput.value.trim();
+
+    if (todoText === "") {
+        return;
+    }
+
+    todos.push(todoText);
+    todoInput.value = "";
+
+    storedTodos();
+    renderTodos();
+});
