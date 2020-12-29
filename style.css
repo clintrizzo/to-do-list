@@ -21,7 +21,6 @@ section {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8;
 }
 
 form {
@@ -29,14 +28,17 @@ form {
     padding-left: 5px;
     text-align: center;
     color: beige;
-    opacity: none;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 p {
+    padding-top: 15px;
+    padding-left: 5px;
     text-align: center;
     color: beige;
-    opacity: none;
-    ;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 footer {
