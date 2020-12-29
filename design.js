@@ -1,15 +1,15 @@
 var todoInput = document.querySelector("#todo-text");
 var todoForm = document.querySelector("#todo-form");
 var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count")
+var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = [];
 
-intit();
+init();
 
 function renderTodos() {
     todoList.innerHTML = "";
-    todoCountSpan = todos.length;
+    todoCountSpan.textContent = todos.length;
 
     for (var i = 0; i < todos.length; i++) {
         var todo = todos[i];
@@ -26,7 +26,7 @@ function renderTodos() {
     }
 }
 
-function intit() {
+function init() {
     var storedTodos = JSON.parse(localStorage.getItem("todos"));
 
     if (storedTodos !== null) {
@@ -37,10 +37,10 @@ function intit() {
 }
 
 function storedTodos() {
-    localStorage.setItemJSON.stringify(todos);
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-todoForm.addEventListener("sumbit", function(event) {
+todoForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
     var todoText = todoInput.value.trim();
@@ -54,4 +54,16 @@ todoForm.addEventListener("sumbit", function(event) {
 
     storedTodos();
     renderTodos();
+});
+
+todoList.addEventListener("click", function(event) {
+    var element = event.target;
+
+    if (element.matches("button") === true) {
+        var index = element.parentElement.getAttribute("data-index");
+        todos.splice(index, 1);
+
+        storedTodos();
+        renderTodos();
+    }
 });
