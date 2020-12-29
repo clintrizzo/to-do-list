@@ -24,7 +24,7 @@ section {
 }
 
 form {
-    padding-top: 15px;
+    padding-top: 20px;
     padding-left: 5px;
     text-align: center;
     color: beige;
@@ -33,12 +33,11 @@ form {
 }
 
 p {
-    padding-top: 15px;
-    padding-left: 5px;
+    padding-top: 5px;
     text-align: center;
-    color: beige;
     font-size: 20px;
     font-weight: bolder;
+    color: beige;
 }
 
 footer {
